@@ -142,7 +142,7 @@ function verificarSeAcertou(nQuestao, resposta) {
 
   
     placar = pontos
-    instrucoes.textContent = "Pontos " + placar
+    instrucoes.textContent = "Points " + placar
 
    
     bloquearAlternativas()
@@ -152,7 +152,7 @@ function verificarSeAcertou(nQuestao, resposta) {
         proxima = numeroDaQuestao+1
 
         if(proxima > totalDeQuestoes) {
-            console.log('Fim do Jogo!')
+            console.log('Game Over!')
             fimDoJogo()
         } else {
             proximaQuestao(proxima)
@@ -162,15 +162,15 @@ function verificarSeAcertou(nQuestao, resposta) {
 }
 
 function fimDoJogo() {
-    instrucoes.textContent = "Fim de Jogo!"
+    instrucoes.textContent = "Game Over!"
     numQuestao.textContent = ""
 
     let pont = ''
-    pontos == 0 ? pont = 'ponto' : pont = 'pontos'
+    pontos == 0 ? pont = 'points' : pont = 'points'
 
-    pergunta.textContent   = "Você conseguiu " + pontos + " " + pont
+    pergunta.textContent   = "You Got " + pontos + " " + pont
 
-    aviso.textContent = "Você conseguiu " + pontos + " " + pont
+    aviso.textContent = "You Got " + pontos + " " + pont
 
     a.textContent = ""
     b.textContent = ""
